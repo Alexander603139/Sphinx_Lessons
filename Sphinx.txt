@@ -1,0 +1,23 @@
+последняя страница
+https://www.sphinx-doc.org/en/master/tutorial/deploying.html
+
+Создание файлов:
+sphinx-quickstart docs (можно без docs, тогда создадуться в текущей папке)
+
+Два варианта рендеринга:
+1.
+sphinx-build -b html docs/source/ docs/build/html
+2. 
+cd docs (директория где лежат файлы)
+.\make html (или make html)
+
+Встроенные темы https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes. По умолчанию alabaster
+
+Проверка документации:
+.\make doctest (или make doctest)
+
+перед тем как заменить py:function на autofunction надо:
+в файле conf.py открыть
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.')

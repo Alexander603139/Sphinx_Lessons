@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Usage &#8212; документация Lumache 0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Welcome to Lumache’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="installation">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Чтобы использовать Lumache, сначала установите его с помощью командды в консоле:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install lumache</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-recipes">
+<h2>Creating recipes<a class="headerlink" href="#creating-recipes" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Чтобы получить список случайных ингредиентов,
+вы можете использовать функцию <code class="docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code>:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="lumache.get_random_ingredients">
+<span class="sig-prename descclassname"><span class="pre">lumache.</span></span><span class="sig-name descname"><span class="pre">get_random_ingredients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lumache.get_random_ingredients" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Возвращает список случайных ингредиентов в виде строк.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>kind</strong> (<em>list</em><em>[</em><em>str</em><em>] </em><em>или None</em>) – «kind» необязательное значение инградиентов.</p>
+</dd>
+<dt class="field-even">Исключение</dt>
+<dd class="field-even"><p><a class="reference internal" href="#lumache.InvalidKindError" title="lumache.InvalidKindError"><strong>lumache.InvalidKindError</strong></a> – Если kind не действительный.</p>
+</dd>
+<dt class="field-odd">Результат</dt>
+<dd class="field-odd"><p>Список инградиентов.</p>
+</dd>
+<dt class="field-even">Тип результата</dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Параметр <code class="docutils literal notranslate"><span class="pre">kind</span></code> должен иметь значения <code class="docutils literal notranslate"><span class="pre">&quot;meat&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;fish&quot;</span></code>,
+или <code class="docutils literal notranslate"><span class="pre">&quot;veggies&quot;</span></code>. В противном случае, <a class="reference internal" href="#lumache.get_random_ingredients" title="lumache.get_random_ingredients"><code class="xref py py-func docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code></a>
+вызовет исключение.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="lumache.InvalidKindError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lumache.</span></span><span class="sig-name descname"><span class="pre">InvalidKindError</span></span><a class="headerlink" href="#lumache.InvalidKindError" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Raised if the kind is invalid.</p>
+<p>Возникает если kind не действительный.</p>
+</dd></dl>
+
+<p>import lumache
+lumache.get_random_ingredients()
+[„shells“, „gorgonzola“, „parsley“]</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lumache</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-recipes">Creating recipes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="предыдущая глава">Welcome to Lumache’s documentation!</a></li>
+      <li>Next: <a href="api.html" title="следующая глава">API</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Graziella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
