@@ -1,2 +1,0 @@
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers that creates recipes mixing random ingredients.
-Это библиотека Python для поваров и любителей еды, создает рецепты, смешивая случайные ингредиенты.
